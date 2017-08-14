@@ -1,0 +1,11 @@
+<div class="main-content">
+  <div class="chat-text-box">
+    <input type="text" [(ngModel)]="msg">
+    <button (click)="sendMessage()">Send</button>
+  </div>
+  <div class="message-list">
+    <ul>
+      <li *ngFor="let item of msgList | async">{{ item.text }}</li>
+    </ul>
+  </div>
+</div>
